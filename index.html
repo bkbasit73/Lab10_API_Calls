@@ -7,25 +7,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>API Interaction Lab</h1>
-    <button id="fetchWithFetch">Fetch Data with fetch()</button>
-    <button id="fetchWithXHR">Fetch Data with XHR</button>
-    <div id="displayData"></div>
+    <div class="container">
+      <h1>API Interaction Lab</h1>
 
-    <h2>Send Data (POST)</h2>
-    <form id="postForm">
-      <input type="text" id="postTitle" placeholder="Title" required />
-      <textarea id="postBody" placeholder="Body" required></textarea>
-      <button type="submit">Submit Post</button>
-    </form>
+      <div class="button-section">
+        <button id="fetchFetchBtn">Fetch Data with fetch()</button>
+        <button id="fetchXhrBtn">Fetch Data with XHR</button>
+      </div>
 
-    <h2>Update Data (PUT)</h2>
-    <form id="putForm">
-      <input type="number" id="postId" placeholder="Post ID" required />
-      <input type="text" id="putTitle" placeholder="Title" required />
-      <textarea id="putBody" placeholder="Body" required></textarea>
-      <button type="submit">Update Post</button>
-    </form>
+      <div id="displaySection" class="display-section">
+        <h2>Fetched Data</h2>
+        <div id="dataDisplay"></div>
+      </div>
+
+      <div class="form-section">
+        <h2>POST Request Form</h2>
+        <form id="postForm">
+          <input type="text" id="postTitle" placeholder="Post Title" required />
+          <textarea id="postBody" placeholder="Post Body" required></textarea>
+          <button type="submit">Submit Post</button>
+        </form>
+      </div>
+
+      <div class="form-section">
+        <h2>PUT Request Form</h2>
+        <form id="putForm">
+          <input
+            type="number"
+            id="putId"
+            placeholder="Post ID to Update"
+            required
+          />
+          <input
+            type="text"
+            id="putTitle"
+            placeholder="Updated Title"
+            required
+          />
+          <textarea id="putBody" placeholder="Updated Body" required></textarea>
+          <button type="submit">Update Post</button>
+        </form>
+      </div>
+
+      <div id="errorSection" class="error-section"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>
